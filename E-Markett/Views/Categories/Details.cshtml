@@ -1,0 +1,41 @@
+﻿@model E_Markett.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1 style="color:blue;text-align:center">Details Of Category</h1>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="color:blue">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd style="color:blue">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_of_producta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_of_producta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit","Categories", new {  id = Model.Id })" class="btn btn-success" target="_blank">
+        <span class="glyphicon glyphicon-ok"> Edit</span>
+    </a>
+    <br />
+    <br />
+    <a href="@Url.Action("Index", "Categories")" class="btn btn-primary" style="text-align :center;margin-bottom:10px">
+        <span class="glyphicon glyphicon-backward"></span>
+        Back to List
+    </a>
+
+</p>
